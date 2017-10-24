@@ -1,0 +1,9 @@
+#page{
+	width: 900px;
+	margin: auto;
+}
+
+.jumbotron{
+	color: blue;
+	text-align: center;
+}
