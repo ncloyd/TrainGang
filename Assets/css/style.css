@@ -1,5 +1,13 @@
+.jumbotron{
+	background-color: blue;
+}
+
 h1{
 	margin: 0 40px 0 0;
+}
+
+#big{
+	text-align: center;
 }
 
 #page{
@@ -20,13 +28,8 @@ img{
 	display: inline-flex;
 }
 
-#big{
-	text-align: center;
-}
-
 #current, #add{
-background: #EBEDEF ;
-
+background: #EBEDEF;
 }
 
 th {
