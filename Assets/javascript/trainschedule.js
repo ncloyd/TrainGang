@@ -65,11 +65,11 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log("Difference in Time: " + timeDiff);
     // find Remainder of the time left and store in a variable
     var timeRemainder = timeDiff % newFrequency;
-    console.log(timeRemainder);
+    
     // to calculate minutes till train,we store it in a variable
     var minToTrain = newFrequency - timeRemainder;
     // next train
     var nxTrain = moment().add(minToTrain, "minutes").format("HH:mm");
     $("#train-table > tbody").append("<tr><th>" + newName + "</th><td>" 
-    + newDestination + "</td><td>" + newFrequency + "</td><td>" + newTime + "</td><td>" + nxTrain + "</td></tr>");
+    + newDestination + "</td><td>" + newFrequency + "</td><td>" + newTime + "</td><td>" + nxTrain + "</td><td>" + minToTrain +"</td></tr>");
 });
