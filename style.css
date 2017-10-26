@@ -1,9 +1,35 @@
+h1{
+	margin: 0 40px 0 0;
+}
+
 #page{
 	width: 900px;
 	margin: auto;
 }
 
-.jumbotron{
-	color: blue;
+.panel-heading, .panel-title{
+	background: #48C9B0;
+	font-weight: bold;
+	color: white;
+}
+
+img{
+	float: left;
+	height: 200px;
+	margin: -60px 0 0 30px;
+	display: inline-flex;
+}
+
+#big{
 	text-align: center;
 }
+
+#current, #add{
+background: #EBEDEF ;
+
+}
+
+th {
+	font-weight: bold; 
+}
+

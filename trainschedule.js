@@ -55,20 +55,21 @@ database.ref().on("child_added", function(childSnapshot) {
     var newFrequency = childSnapshot.val().frequency;
 
 
-    var firstTimeConverted = moment(firstTrain, "HH:mm");
+    var firstTimeConverted = moment(newTime, "HH:mm");
     console.log(firstTimeConverted);
     var currentTime = moment().format("HH:mm");
     console.log("CURRENT TIME: " + currentTime);
 
     var timeDiff = moment().diff(moment(firstTimeConverted), "minutes");
-    console.log(firstTrain);
+   
     console.log("Difference in Time: " + timeDiff);
     // find Remainder of the time left and store in a variable
-    var timeRemainder = timeDiff % frequency;
+    var timeRemainder = timeDiff % newFrequency;
     console.log(timeRemainder);
     // to calculate minutes till train,we store it in a variable
-    var minToTrain = frequency - timeRemainder;
+    var minToTrain = newFrequency - timeRemainder;
     // next train
     var nxTrain = moment().add(minToTrain, "minutes").format("HH:mm");
-    $("#train-table > tbody").append("<tr><td>" + newName + "</td><td>" + newDestination + "</td><td>" + newTime + "</td><td>" + newFrequency + "</td></tr>");
+    $("#train-table > tbody").append("<tr><th>" + newName + "</th><td>" 
+    + newDestination + "</td><td>" + newFrequency + "</td><td>" + newTime + "</td><td>" + nxTrain + "</td></tr>");
 });
